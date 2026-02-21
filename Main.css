@@ -498,7 +498,9 @@ section {
         grid-template-columns: 1fr;
     }
     .skills-grid {
-    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 20px;
     } 
 }
 
@@ -518,4 +520,5 @@ footer {
 .header-nav a.active::after {
     width: 100%;
 }
+
 
