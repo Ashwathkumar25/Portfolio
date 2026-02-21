@@ -234,7 +234,8 @@ section {
 
 .skill-card {
     padding: 28px 20px;
-    width: 180px;
+    width: 100%;
+    max-width: 180px;
     background: #0f172a;
     border: 1px solid #1e293b;
     border-radius: 14px;
@@ -477,50 +478,73 @@ section {
 }
 
 /* ================= RESPONSIVE ================= */
+/* ================= MOBILE FIX ================= */
 @media (max-width: 900px) {
 
+    /* Header */
     .header-flex {
         flex-direction: column;
-        gap: 10px;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
     }
 
-    .profile-card,
+    .header-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    /* Container padding adjustment */
+    .container {
+        padding: 0 16px;
+    }
+
+    /* Hero Section */
+    .profile-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 25px;
+        gap: 25px;
+    }
+
+    .profile-photo-area img {
+        width: 140px;
+    }
+
+    /* Skills Section - FORCE proper grid */
+    .skills-grid {
+        display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        overflow: visible !important;
+    }
+
+    .skill-card {
+        width: 100%;
+    }
+
+    /* Projects */
     .split-section {
         flex-direction: column;
         text-align: center;
+        gap: 25px;
     }
 
+    .split-image img {
+        width: 160px;
+    }
+
+    /* Project visual grid */
+    .project-visual.dual {
+        grid-template-columns: 1fr;
+    }
+
+    /* Certifications */
     .cert-grid {
         grid-template-columns: 1fr;
     }
 
-    .project-visual.dual {
-        grid-template-columns: 1fr;
-    }
-    .skills-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    } 
-}
-
-html {
-    scroll-behavior: smooth;
-}
-html, body {
-    overflow-x: hidden;
-}
-section,
-footer {
-    scroll-margin-top: 100px;
-}
-
-.header-nav a.active {
-    color: #ffffff;
-}
-
-.header-nav a.active::after {
-    width: 100%;
 }
 
 
