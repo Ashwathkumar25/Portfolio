@@ -507,7 +507,9 @@ section {
 html {
     scroll-behavior: smooth;
 }
-
+html, body {
+    overflow-x: hidden;
+}
 section,
 footer {
     scroll-margin-top: 100px;
@@ -520,5 +522,6 @@ footer {
 .header-nav a.active::after {
     width: 100%;
 }
+
 
 
