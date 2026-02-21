@@ -483,16 +483,16 @@ section {
 
     /* Header */
     .header-flex {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
     }
 
     .header-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
     }
 
     /* Container padding adjustment */
@@ -514,15 +514,16 @@ section {
 
     /* Skills Section - FORCE proper grid */
     .skills-grid {
-        display: grid !important;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 16px;
-        overflow: visible !important;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow: visible;
+   }
 
-    .skill-card {
-        width: 100%;
-    }
+   .skill-card {
+    width: 45%;
+    margin-bottom: 15px;
+   }
 
     /* Projects */
     .split-section {
@@ -546,6 +547,7 @@ section {
     }
 
 }
+
 
 
 
