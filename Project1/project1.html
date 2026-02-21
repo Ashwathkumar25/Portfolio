@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI-Driven Retail Inventory Optimization</title>
+    <link rel="stylesheet" href="../Main.css">
+</head>
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="project-header">
+    <div class="container header-flex">
+        <div class="header-left">
+            <h2>G Ashwathkumar</h2>
+        </div>
+        <div class="header-right">
+            <a href="../index.html" class="back-link">← HOME</a>
+        </div>
+    </div>
+</header>
+
+<!-- PROJECT TITLE (FULL WIDTH) -->
+<div class="project-title-wrapper">
+    <h1>Smart Retail Analytics – Inventory Management</h1>
+    <p class="project-subtitle">
+        A data-driven framework that combines demand forecasting, 
+        and pattern analysis to improve inventory decisions and reduce stock out risks.
+    </p>
+    
+</div>
+
+
+<!-- ================= PROJECT CONTENT ================= -->
+<main class="project-content">
+    <div class="container">
+
+        <!-- Business Problem -->
+        <section class="project-section">
+            <h2>🔹 Business Problem</h2>
+            <p>
+                Retail businesses constantly struggle to balance inventory.
+                Too much stock leads to high holding costs and blocked working capital,
+                while too little stock causes lost sales and customer dissatisfaction.
+                Most inventory decisions are reactive because demand patterns are not fully understood.
+                Poor inventory decisions directly impact service levels, working capital, and profitability.
+                This project addresses the need for a predictive, data-driven inventory intelligence system
+                that helps businesses anticipate demand and detect inventory risks before they become costly problems.
+            </p>
+        </section>
+
+        <!-- Solution Overview -->
+        <section class="project-section">
+            <h2>🔹 Solution Overview</h2>
+            <ul>
+                <li>Forecasts future demand trends</li>
+                <li>Identifies inventory-demand imbalance patterns</li>
+                <li>Predicts potential stockout and overstock risks</li>
+                <li>Supports proactive, evidence-based replenishment planning</li>
+            </ul>
+        </section>
+
+        <!-- Demand Forecasting -->
+        <section class="project-section">
+            <h2>🔹 Demand Forecasting (ARIMA & SARIMA)</h2>
+            <p>
+                ARIMA and SARIMA models analyze historical sales data to identify trends
+                and seasonal cycles in demand.
+            </p>
+            <div class="project-visual dual">
+
+    <div>
+        <img src="ARIMA.png" alt="ARIMA Demand Forecast">
+        <div class="visual-caption">ARIMA Demand Forecast</div>
+    </div>
+
+    <div>
+        <img src="SARIMA.png" alt="SARIMA Demand Forecast">
+        <div class="visual-caption">SARIMA-Seasonal Demand Forecast</div>
+    </div>
+
+</div>
+
+            <p><strong>Business Contribution:</strong></p>
+            <ul>
+                <li>Improves visibility of future demand</li>
+                <li>Helps plan inventory before seasonal peaks</li>
+                <li>Reduces emergency replenishment</li>
+                <li>Supports stable production and supply planning</li>
+            </ul>
+
+            <p>
+                These models transform past sales data into forward-looking demand intelligence.
+            </p>
+
+
+        </section>
+
+                <!-- Clustering -->
+        <section class="project-section">
+            <h2>🔹 Inventory Pattern Discovery (Clustering Analysis)</h2>
+            <p>
+                Cluster analysis groups products based on inventory levels and Sales.
+            </p>
+            <div class="project-visual">
+    <img src="Cluster_Analysis_2022.png"
+         alt="Inventory Pattern Discovery - Clustering Analysis">
+</div>
+
+
+            <p><strong>Business Contribution:</strong></p>
+            <ul>
+                <li>Identifies inefficient inventory structures</li>
+                <li>Highlights slow-moving stock with high inventory</li>
+                <li>Detects high-demand products with low stock</li>
+                <li>Enables targeted corrective actions</li>
+            </ul>
+            <p>
+                This analysis provides behavior-based inventory segmentation,
+                improving operational visibility.
+            </p>
+        </section>
+
+        <!-- Inventory Risk Prediction -->
+        <section class="project-section">
+            <h2>🔹 Inventory Risk Prediction (Machine Learning Classification)</h2>
+            <p>
+                A Random Forest classification model predicts inventory-demand situations
+                such as stockout risk, overstock conditions, or balanced inventory.
+            </p>
+            <div class="project-visual">
+    <img src="Classification.png"
+         alt="Inventory Risk Prediction - Classification Model">
+</div>
+            <p><strong>Business Contribution:</strong></p>
+            <ul>
+                <li>Acts as an early warning system</li>
+                <li>Detects risk situations before financial impact</li>
+                <li>Improves decision speed for inventory managers</li>
+                <li>Reduces dependence on manual monitoring</li>
+            </ul>
+
+            <p>
+                This layer converts raw operational data into actionable risk signals.
+            </p>
+        </section>
+
+
+        <!-- Business Impact -->
+        <section class="project-section">
+            <h2>🔹 Business Impact</h2>
+            <ul>
+                <li>Reduced stockout risk</li>
+                <li>Lower excess inventory</li>
+                <li>Better replenishment planning</li>
+                <li>Improved working capital efficiency</li>
+                <li>Faster and more informed decision-making</li>
+            </ul>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="project-section conclusion">
+            <h2>🔹 Conclusion</h2>
+            <p>
+                This project demonstrates how combining time-series forecasting,
+                machine learning, and clustering transforms traditional inventory management
+                into a predictive and intelligent system.
+                By shifting from reactive decisions to proactive planning,
+                businesses can achieve higher service levels while controlling inventory costs.
+            </p>
+        </section>
+
+<section class="project-section tools-mini">
+    <h2>Tools & Techniques</h2>
+
+    <div class="tools-tags">
+        <span class="tool-tag">Excel</span>
+        <span class="tool-tag">Python</span>
+        <span class="tool-tag">ARIMA</span>
+        <span class="tool-tag">SARIMA</span>
+        <span class="tool-tag">Machine Learning</span>
+        <span class="tool-tag">Clustering</span>
+        <span class="tool-tag">Classification</span>
+        <span class="tool-tag">Random Forest</span>
+    </div>
+</section>
+
+
+    </div>
+</main>
+
+<script>
+
+// ================= SMART HEADER =================
+
+let lastScroll = 0;
+const header = document.querySelector(".top-header") || document.querySelector(".project-header");
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    // Hide header when scrolling down
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.add("header-hidden");
+    } else {
+        header.classList.remove("header-hidden");
+    }
+
+    // Add shadow after slight scroll
+    if (currentScroll > 50) {
+        header.classList.add("header-active");
+    } else {
+        header.classList.remove("header-active");
+    }
+
+    lastScroll = currentScroll;
+});
+
+// ================= ACTIVE NAVIGATION =================
+
+const navLinks = document.querySelectorAll(".nav-link");
+const allSections = document.querySelectorAll("section, footer");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    allSections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+
+
+
+
+</script>
+
+</body>
+</html>

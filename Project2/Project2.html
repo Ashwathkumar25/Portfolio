@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customer Segmentation & Financial Analysis – Insurance Analytics</title>
+    <link rel="stylesheet" href="../Main.css"> 
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+<header class="project-header">
+    <div class="container header-flex">
+        <div class="header-left">
+            <h2>G Ashwathkumar</h2>
+        </div>
+        <div class="header-right">
+            <a href="../index.html" class="back-link">← HOME</a>
+        </div>
+    </div>
+</header>
+
+<!-- ================= MAIN CONTENT ================= -->
+<main class="project-content">
+    <div class="container">
+
+        <!-- ================= PROJECT TITLE ================= -->
+        <div class="project-title-wrapper">
+            <h1>Customer Segmentation & Financial Analysis</h1>
+            <p class="project-subtitle">
+                A business intelligence project that analyzes customer demographics, coverage amounts,
+                and premium behavior to support data-driven decision-making in the insurance domain.
+            </p>
+        </div>
+
+
+
+        <!-- ================= BUSINESS PROBLEM ================= -->
+        <section class="project-section">
+            <h2>🔹 Business Problem</h2>
+            <p>
+               Companies serve customers with diverse financial capacities, life stages, and protection needs. However, policy design, pricing, and targeting decisions are often made without a deep understanding of customer financial behavior and demographic differences.
+As a result:
+Customers may be offered coverage that does not match their affordability
+Premium structures may not reflect customers’ income levels and risk profiles
+High-value and financially stable customers are not clearly distinguished
+Financially vulnerable segments may face policies that are difficult to sustain
+These gaps create a mismatch between customer needs leading to lower adoption rates, higher drop-off rates, and reduced customer lifetime value. From a business perspective, this weak alignment affects revenue growth, profitability, and long-term customer relationships.
+          
+            </p>
+        </section>
+
+        <!-- ================= SOLUTION OVERVIEW ================= -->
+        <section class="project-section">
+            <h2>🔹 Solution Overview</h2>
+            <ul>
+                <li>Analyzes customer demographics such as age, gender, occupation, and geography</li>
+                <li>Examines coverage amount and premium distributions across customer segments</li>
+                <li>Identifies high-value and risk-sensitive customer groups</li>
+                <li>Supports strategic decision-making using interactive Power BI dashboards</li>
+            </ul>
+        </section>
+
+        <!-- ================= CUSTOMER DEMOGRAPHIC ANALYSIS ================= -->
+        <section class="project-section">
+            <h2>🔹 Customer Demographic Analysis</h2>
+                        <div class="project-visual">
+                <img src="Screenshot 2026-01-31 192712.png" alt="Customer Demographic Dashboard">
+                <div class="visual-caption">Customer Demographic Overview</div>
+
+            <p>
+                This analysis focuses on understanding the composition of the customer base using
+                demographic attributes such as age group, gender, occupation, education level, and location.
+            
+                These insights help businesses identify dominant customer groups, regional concentration,
+                and workforce profiles that influence insurance demand.
+            </p>
+            </div>
+        </section>
+
+
+        <!-- ================= SEGMENTATION BY INCOME & AGE ================= -->
+        <section class="project-section">
+            <h2>🔹 Segmentation by Income and Age</h2>
+                        <div class="project-visual">
+                <img src="Screenshot 2026-01-31 192733.png" alt="Income and Age Segmentation Dashboard">
+                <div class="visual-caption">Income & Age-Based Customer Segmentation</div>
+            </div>
+            <p>
+                Customers were segmented based on income levels and age groups to understand how
+                financial capacity influences insurance coverage and premium choices.
+    
+                This segmentation enables insurance businesses to align products with affordability
+                and improve targeting of premium and coverage offerings.
+            </p>
+
+
+        </section>
+
+        <!-- ================= BUSINESS IMPACT ================= -->
+        <section class="project-section">
+            <h2>🔹 Business Impact</h2>
+            <ul>
+                <li>Improved understanding of customer financial behavior</li>
+                <li>Better alignment of coverage and premium strategies</li>
+                <li>Identification of high-value customer segments</li>
+                <li>Enhanced decision-making using visual analytics</li>
+                <li>Support for targeted marketing and policy optimization</li>
+            </ul>
+        </section>
+
+        <!-- ================= CONCLUSION ================= -->
+        <section class="project-section conclusion">
+            <h2>🔹 Conclusion</h2>
+            <p>
+                This project demonstrates how Power BI–driven analytics can transform raw insurance data
+                into meaningful business insights. By combining customer demographics with financial
+                analysis, insurance companies can make informed decisions related to segmentation,
+                pricing, and policy design.
+            </p>
+            <p>
+                The dashboard-based approach ensures clarity, accessibility, and scalability for
+                business stakeholders.
+            </p>
+        </section>
+
+        <!-- ================= TOOLS & TECHNIQUES ================= -->
+        <section class="project-section tools-mini">
+    <h2>Tools & Techniques</h2>
+
+    <div class="tools-tags">
+        <span class="tool-tag">Excel</span>
+        <span class="tool-tag">Power BI</span>
+        <span class="tool-tag">DAX</span>
+        <span class="tool-tag">Customer Segmentation</span>
+        <span class="tool-tag">Financial Analysis</span>
+        <span class="tool-tag">Dashboarding</span>
+    </div>
+</section>
+</main>
+<script>
+
+// ================= SMART HEADER =================
+
+let lastScroll = 0;
+const header = document.querySelector(".top-header") || document.querySelector(".project-header");
+
+window.addEventListener("scroll", () => {
+    const currentScroll = window.pageYOffset;
+
+    // Hide header when scrolling down
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.add("header-hidden");
+    } else {
+        header.classList.remove("header-hidden");
+    }
+
+    // Add shadow after slight scroll
+    if (currentScroll > 50) {
+        header.classList.add("header-active");
+    } else {
+        header.classList.remove("header-active");
+    }
+
+    lastScroll = currentScroll;
+});
+
+// ================= ACTIVE NAVIGATION =================
+
+const navLinks = document.querySelectorAll(".nav-link");
+const allSections = document.querySelectorAll("section, footer");
+
+window.addEventListener("scroll", () => {
+
+    let current = "";
+
+    allSections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        const sectionHeight = section.clientHeight;
+
+        if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach(link => {
+        link.classList.remove("active");
+        if (link.getAttribute("href") === "#" + current) {
+            link.classList.add("active");
+        }
+    });
+});
+
+
+
+
+</script>
+
+</body>
+</html>
