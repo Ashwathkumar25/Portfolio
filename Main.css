@@ -497,6 +497,9 @@ section {
     .project-visual.dual {
         grid-template-columns: 1fr;
     }
+    .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+    } 
 }
 
 html {
@@ -515,3 +518,4 @@ footer {
 .header-nav a.active::after {
     width: 100%;
 }
+
