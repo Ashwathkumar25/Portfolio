@@ -546,7 +546,13 @@ section {
         grid-template-columns: 1fr;
     }
 
+    .tool-tag {
+    font-size: 12px;
+    padding: 6px 10px;
+    }
+
 }
+
 
 
 
