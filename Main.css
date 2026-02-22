@@ -387,6 +387,9 @@ section {
     padding: 6px 14px;
     font-size: 13px;
     border-radius: 999px;
+}
+/* Tools container layout */
+.tools-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -556,6 +559,7 @@ section {
     }
 
 }
+
 
 
 
