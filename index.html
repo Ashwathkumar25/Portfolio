@@ -6,7 +6,7 @@
     <title>G Ashwathkumar | Portfolio</title>
     <link rel="stylesheet" href="Main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-        <!-- Google Analytics -->
+    <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-PEFX7FGD7Z"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
@@ -43,7 +43,7 @@
         <div class="profile-card">
 
             <div class="profile-photo-area">
-                <img src="Images/Profile pic.jpg" alt="Profile Photo">
+                <img src="Images/Profile pic.png" alt="Profile Photo">
             </div>
 
             <div class="profile-content">
@@ -68,68 +68,168 @@
     <div class="container">
         <h2 class="section-title">Technical Skills</h2>
 
-   <div class="skills-grid">
+        <div class="skills-grid">
 
-    <a href="#" class="skill-card">
-        <img src="Images/Excel logo.png" loading="lazy" class="skill-icon-img" alt="Excel">
-        <span class="skill-name">Excel</span>
-    </a>
+            <!-- Excel -->
+            <div class="skill-card">
+                <div class="skill-name">Excel</div>
+                <img src="Images/Excel logo.png" class="skill-icon-img" alt="Excel">
+                <div class="skill-subtext">
+                    Power Query • Pivot Tables • Forecasting • Data Cleaning
+                </div>
 
-    <a href="#" class="skill-card">
-        <img src="Images/Power Bi Logo.png" loading="lazy" class="skill-icon-img" alt="Power BI">
-        <span class="skill-name">Power BI</span>
-    </a>
-
-    <a href="#" class="skill-card">
-        <img src="Images/Tableau Logo.png" loading="lazy" class="skill-icon-img" alt="Tableau">
-        <span class="skill-name">Tableau</span>
-    </a>
-
-    <a href="#" class="skill-card">
-        <img src="Images/Python Logo.jfif" loading="lazy" class="skill-icon-img" alt="Python">
-        <span class="skill-name">Python</span>
-    </a>
-
-    <a href="#" class="skill-card">
-        <img src="Images/R Logo.jfif" loading="lazy" class="skill-icon-img" alt="R Studio">
-        <span class="skill-name">R Studio</span>
-    </a>
-
-    <a href="#" class="skill-card">
-        <img src="Images/SQL Logo.jfif" loading="lazy" class="skill-icon-img" alt="SQL">
-        <span class="skill-name">SQL</span>
-    </a>
-
-</div>
+                <!-- Activate when repository is ready -->
+                
+                <a href="https://github.com/Ashwathkumar25/Excel"
+                   target="_blank"
+                   class="skill-btn"
+                   onclick="trackGitClick('Excel')">
+                    View Projects
+                </a>
+                
+            </div>
 
 
+            <!-- Power BI -->
+            <div class="skill-card">
+                <div class="skill-name">Power BI</div>
+                <img src="Images/Power Bi Logo.png" class="skill-icon-img" alt="Power BI">
+                <div class="skill-subtext">
+                    DAX • Data Modeling • KPI Dashboards • Drill-through
+                </div>
+
+                
+                <a href="https://github.com/Ashwathkumar25/Power-Bi"
+                   target="_blank"
+                   class="skill-btn"
+                   onclick="trackGitClick('Power BI')">
+                    View Projects
+                </a>
+                
+            </div>
+
+
+            <!-- Tableau -->
+            <div class="skill-card">
+                <div class="skill-name">Tableau</div>
+                <img src="Images/Tableau Logo.png" class="skill-icon-img" alt="Tableau">
+                <div class="skill-subtext">
+                    Dashboards • Storytelling • Calculated Fields • Filters
+                </div>
+
+                <!--
+                <a href="https://github.com/ashwathkumar25/tableau-projects"
+                   target="_blank"
+                   class="skill-btn"
+                   onclick="trackGitClick('Tableau')">
+                    View Projects
+                </a>
+                -->
+            </div>
+
+
+            <!-- Python -->
+            <div class="skill-card">
+                <div class="skill-name">Python</div>
+                <img src="Images/Python Logo.jfif" class="skill-icon-img" alt="Python">
+                <div class="skill-subtext">
+                    Descriptive • EDA • ML • Time Series
+                </div>
+
+                
+                <a href="https://github.com/ashwathkumar25/python"
+                   target="_blank"
+                   class="skill-btn"
+                   onclick="trackGitClick('Python')">
+                    View Projects
+                </a>
+                
+            </div>
+
+
+            <!-- R Studio -->
+            <div class="skill-card">
+                <div class="skill-name">R Studio</div>
+                <img src="Images/R Logo.jfif" class="skill-icon-img" alt="R Studio">
+                <div class="skill-subtext">
+                    Statistical Modeling • Visualization • Regression • Forecasting
+                </div>
+
+                
+                <a href="https://github.com/Ashwathkumar25/R-Studio"
+                   target="_blank"
+                   class="skill-btn"
+                   onclick="trackGitClick('R Studio')">
+                    View Projects
+                </a>
+                
+            </div>
+
+
+            <!-- SQL -->
+            <div class="skill-card">
+                <div class="skill-name">SQL</div>
+                <img src="Images/SQL Logo.jfif" class="skill-icon-img" alt="SQL">
+                <div class="skill-subtext">
+                    Joins • Aggregations • CTE • Window Functions
+                </div>
+
+                <!--
+                <a href="https://github.com/ashwathkumar25/sql-projects"
+                   target="_blank"
+                   class="skill-btn"
+                   onclick="trackGitClick('SQL')">
+                    View Projects
+                </a>
+                -->
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <!-- ================= PROJECTS SECTION ================= -->
 <section id="projects" class="section">
     <div class="container">
         <h2 class="section-title">Projects</h2>
 
+        <!-- Project 1 -->
         <div class="split-section">
             <div class="split-image">
-                <img src="Images/Smart retail.png" loading="lazy" alt="Retail Analytics Project">
+                <img src="Images/Smart retail.png" alt="Retail Analytics Project">
             </div>
             <div class="split-text">
                 <h3>Smart Retail Analytics – Inventory Management</h3>
-                <p>Data-driven inventory intelligence system that links demand forecasting with smarter stock decisions. 
-                    Using time-series forecasting, product prioritization, pattern detection, and predictive modeling, it identifies future demand and inventory risks. 
-                    The approach helps businesses reduce stockouts, avoid overstocking, and improve replenishment planning. Overall, it supports proactive, evidence-based inventory management rather than reactive decision-making. </p>
-                <a href="Project1/project1.html" class="btn">View →</a>
+                <p>
+                    Data-driven inventory intelligence system that links demand forecasting 
+                    with smarter stock decisions. Using time-series forecasting, product 
+                    prioritization, pattern detection, and predictive modeling, it identifies 
+                    future demand and inventory risks.
+                </p>
+                <a href="Project1/project1.html"
+                   class="btn"
+                   onclick="trackProjectClick('Smart Retail Analytics')">
+                   View →
+                </a>
             </div>
         </div>
 
+        <!-- Project 2 -->
         <div class="split-section">
             <div class="split-image">
-                <img src="Images/Customer segmnetation.png" loading="lazy" alt="Customer Segmentation Project">
+                <img src="Images/Customer segmnetation.png" alt="Customer Segmentation Project">
             </div>
             <div class="split-text">
                 <h3>Customer Segmentation Using Power BI</h3>
-                <p>Segmented customers based on purchase patterns and demographics, enabling targeted marketing strategies through dashboards.</p>
-                <a href="Project2/Project2.html" class="btn">View →</a>
+                <p>
+                    Segmented customers based on purchase patterns and demographics,
+                    enabling targeted marketing strategies through interactive dashboards.
+                </p>
+                <a href="Project2/Project2.html"
+                   class="btn"
+                   onclick="trackProjectClick('Customer Segmentation')">
+                   View →
+                </a>
             </div>
         </div>
     </div>
@@ -144,33 +244,33 @@
         <div class="cert-grid">
 
             <div class="cert-item">
-                <img src="Images/IBM.png" loading="lazy" class="cert-img" alt="IBM Certification">
+                <img src="Images/IBM.png" class="cert-img" alt="IBM Certification">
                 <h4>IBM ICE – Business Analytics</h4>
                 <a href="https://www.credly.com/badges/ff8e873b-e04e-4ea3-aef2-df4bf0b7e694" target="_blank" class="btn">Verify →</a>
             </div>
 
             <div class="cert-item">
-                <img src="Images/NPTEL BDM.png" loading="lazy" class="cert-img" alt="">
+                <img src="Images/NPTEL BDM.png" class="cert-img" alt="">
                 <h4>NPTEL – Business Analytics for Management Decision</h4>
             </div>
 
             <div class="cert-item">
-                <img src="Images/POWER BI.png" loading="lazy" class="cert-img" alt="">
+                <img src="Images/POWER BI.png" class="cert-img" alt="">
                 <h4>NPTEL – Business Intelligence with Power BI</h4>
             </div>
 
             <div class="cert-item">
-                <img src="Images/DWDM.png" loading="lazy" class="cert-img" alt="">
+                <img src="Images/DWDM.png" class="cert-img" alt="">
                 <h4>NPTEL – Data Warehousing & Data Mining</h4>
             </div>
 
             <div class="cert-item">
-                <img src="Images/EXCEL.png" loading="lazy" class="cert-img" alt="">
+                <img src="Images/EXCEL.png" class="cert-img" alt="">
                 <h4>Business Analytics – MS Excel</h4>
             </div>
 
             <div class="cert-item">
-                <img src="Images/Tableau.png" loading="lazy" class="cert-img" alt="">
+                <img src="Images/Tableau.png" class="cert-img" alt="">
                 <h4>Data Visualization & Storytelling with Tableau</h4>
             </div>
 
@@ -292,13 +392,108 @@ window.addEventListener("scroll", () => {
     });
 });
 
+</script>
+
+<!-- ===================================================== -->
+<!-- GA4 CUSTOM EVENT TRACKING – CLEAN STRUCTURE -->
+<!-- Place this before </body> -->
+<!-- ===================================================== -->
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+  /* -----------------------------------------------------
+     1️⃣ SECTION VIEW TRACKING
+     Fires once when section becomes 50% visible
+  ----------------------------------------------------- */
+
+  const sections = document.querySelectorAll(".section, footer");
+
+  const sectionViewObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+
+        const sectionId = entry.target.id || "footer";
+
+        gtag('event', 'section_view', {
+          section_name: sectionId
+        });
+
+        observer.unobserve(entry.target); // Prevent duplicate firing
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(section => {
+    sectionViewObserver.observe(section);
+  });
 
 
+
+  /* -----------------------------------------------------
+     2️⃣ SECTION TIME SPENT TRACKING
+     Tracks how long user stays inside section
+  ----------------------------------------------------- */
+
+  let activeSection = null;
+  let sectionStartTime = 0;
+
+  const timeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+
+      const sectionId = entry.target.id || "footer";
+
+      if (entry.isIntersecting) {
+        activeSection = sectionId;
+        sectionStartTime = Date.now();
+      } else {
+        if (activeSection === sectionId) {
+          const timeSpent = Math.round((Date.now() - sectionStartTime) / 1000);
+
+          gtag('event', 'section_time_spent', {
+            section_name: sectionId,
+            time_seconds: timeSpent
+          });
+
+          activeSection = null;
+        }
+      }
+
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(section => {
+    timeObserver.observe(section);
+  });
+
+});
+
+
+/* -----------------------------------------------------
+   3️⃣ PROJECT BUTTON CLICK TRACKING
+   Used when user clicks "View Project"
+----------------------------------------------------- */
+
+function trackProjectClick(projectName) {
+  gtag('event', 'project_click', {
+    project_name: projectName
+  });
+}
+
+
+/* -----------------------------------------------------
+   4️⃣ GITHUB OUTBOUND CLICK TRACKING
+   Used for GitHub repo links (Skills + Projects)
+----------------------------------------------------- */
+
+function trackGitClick(itemName) {
+  gtag('event', 'github_click', {
+    item_name: itemName
+  });
+}
 
 </script>
 
-
 </body>
 </html>
-
-
