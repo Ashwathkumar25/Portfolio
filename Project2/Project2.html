@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Customer Segmentation & Financial Analysis – Insurance Analytics</title>
     <link rel="stylesheet" href="../Main.css"> 
+    <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PEFX7FGD7Z"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PEFX7FGD7Z');
+</script>
 </head>
 
 <body>
@@ -191,12 +199,30 @@ window.addEventListener("scroll", () => {
         }
     });
 });
+</script>
 
 
+<script>
+/* ==========================================================
+   PROJECT PAGE VIEW TRACKING
+   Fires when the project page fully loads
+   Ensures GA4 is ready before sending event
+========================================================== */
 
+document.addEventListener("DOMContentLoaded", function () {
 
+  if (typeof gtag === "function") {
+    
+    gtag('event', 'project_page_view', {
+      event_category: 'Projects',
+      event_label: 'Customer Segmentation',
+      page_title: document.title
+    });
+
+  }
+
+});
 </script>
 
 </body>
 </html>
-
