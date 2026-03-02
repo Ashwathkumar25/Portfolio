@@ -492,10 +492,25 @@ function trackGitClick(itemName) {
     item_name: itemName
   });
 }
+    // ================= RESUME DOWNLOAD TRACKING =================
+
+function trackResumeDownload() {
+    
+    if (typeof gtag === "function") {
+
+        gtag('event', 'resume_download', {
+            event_category: 'Engagement',
+            event_label: 'Main Resume',
+            page_title: document.title
+        });
+
+    }
+}
 
 </script>
 
 </body>
 </html>
+
 
 
