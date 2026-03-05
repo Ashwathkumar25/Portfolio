@@ -56,7 +56,7 @@
                     Passionate about leveraging data-driven insights to improve operational efficiency and support strategic decisions.
                 </p>
 
-                <a href="Images/Resume.pdf" class="btn" onclick="trackResumeDownload()">Download Resume</a>
+                <a href="#" class="btn" onclick="trackResumeDownload()"> Download Resume</a>
             </div>
 
         </div>
@@ -78,15 +78,11 @@
                     Power Query • Pivot Tables • Forecasting • Data Cleaning
                 </div>
 
-                <!-- Activate when repository is ready -->
-                
-                <a href="https://github.com/Ashwathkumar25/Excel"
-                   target="_blank"
+                <a href="#"
                    class="skill-btn"
-                   onclick="trackGitClick('Excel')">
+                   onclick="trackGitClick('Excel','https://github.com/Ashwathkumar25/Excel'); return false;">
                     View Projects
                 </a>
-                
             </div>
 
 
@@ -98,18 +94,15 @@
                     DAX • Data Modeling • KPI Dashboards • Drill-through
                 </div>
 
-                
-                <a href="https://github.com/Ashwathkumar25/Power-Bi"
-                   target="_blank"
+                <a href="#"
                    class="skill-btn"
-                   onclick="trackGitClick('Power BI')">
+                   onclick="trackGitClick('Power BI','https://github.com/Ashwathkumar25/Power-Bi'); return false;">
                     View Projects
                 </a>
-                
             </div>
 
 
-            <!-- Tableau -->
+            <!-- Tableau (Future Activation) -->
             <div class="skill-card">
                 <div class="skill-name">Tableau</div>
                 <img src="Images/Tableau Logo.png" class="skill-icon-img" alt="Tableau">
@@ -118,10 +111,9 @@
                 </div>
 
                 <!--
-                <a href="https://github.com/ashwathkumar25/tableau-projects"
-                   target="_blank"
+                <a href="#"
                    class="skill-btn"
-                   onclick="trackGitClick('Tableau')">
+                   onclick="trackGitClick('Tableau','https://github.com/ashwathkumar25/tableau-projects'); return false;">
                     View Projects
                 </a>
                 -->
@@ -136,14 +128,11 @@
                     Descriptive • EDA • ML • Time Series
                 </div>
 
-                
-                <a href="https://github.com/ashwathkumar25/python"
-                   target="_blank"
+                <a href="#"
                    class="skill-btn"
-                   onclick="trackGitClick('Python')">
+                   onclick="trackGitClick('Python','https://github.com/ashwathkumar25/python'); return false;">
                     View Projects
                 </a>
-                
             </div>
 
 
@@ -155,18 +144,15 @@
                     Statistical Modeling • Visualization • Regression • Forecasting
                 </div>
 
-                
-                <a href="https://github.com/Ashwathkumar25/R-Studio"
-                   target="_blank"
+                <a href="#"
                    class="skill-btn"
-                   onclick="trackGitClick('R Studio')">
+                   onclick="trackGitClick('R Studio','https://github.com/Ashwathkumar25/R-Studio'); return false;">
                     View Projects
                 </a>
-                
             </div>
 
 
-            <!-- SQL -->
+            <!-- SQL (Future Activation) -->
             <div class="skill-card">
                 <div class="skill-name">SQL</div>
                 <img src="Images/SQL Logo.jfif" class="skill-icon-img" alt="SQL">
@@ -175,10 +161,9 @@
                 </div>
 
                 <!--
-                <a href="https://github.com/ashwathkumar25/sql-projects"
-                   target="_blank"
+                <a href="#"
                    class="skill-btn"
-                   onclick="trackGitClick('SQL')">
+                   onclick="trackGitClick('SQL','https://github.com/ashwathkumar25/sql-projects'); return false;">
                     View Projects
                 </a>
                 -->
@@ -318,7 +303,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         <div class="footer-icons">
 
-            <a href="ashwathkumarhegde@gmail.com" aria-label="Email">
+            <a href="mailto:ashwathkumarhegde@gmail.com" aria-label="Email">
                 <i class="fa-solid fa-envelope"></i>
             </a>
 
@@ -395,22 +380,20 @@ window.addEventListener("scroll", () => {
 </script>
 
 <!-- ===================================================== -->
-<!-- GA4 CUSTOM EVENT TRACKING – CLEAN STRUCTURE -->
-<!-- Place this before </body> -->
+<!-- GA4 ADVANCED EVENT TRACKING -->
 <!-- ===================================================== -->
 
 <script>
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* -----------------------------------------------------
+  /* ===============================
      1️⃣ SECTION VIEW TRACKING
-     Fires once when section becomes 50% visible
-  ----------------------------------------------------- */
+  =============================== */
 
-  const sections = document.querySelectorAll(".section, footer");
+  const sections = document.querySelectorAll("section, footer");
 
-  const sectionViewObserver = new IntersectionObserver((entries, observer) => {
+  const sectionObserver = new IntersectionObserver((entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
 
@@ -420,98 +403,104 @@ document.addEventListener("DOMContentLoaded", function () {
           section_name: sectionId
         });
 
-        observer.unobserve(entry.target); // Prevent duplicate firing
+        observer.unobserve(entry.target);
       }
     });
   }, { threshold: 0.5 });
 
-  sections.forEach(section => {
-    sectionViewObserver.observe(section);
-  });
+  sections.forEach(section => sectionObserver.observe(section));
 
 
-
-  /* -----------------------------------------------------
-     2️⃣ SECTION TIME SPENT TRACKING
-     Tracks how long user stays inside section
-  ----------------------------------------------------- */
+  /* ===============================
+     2️⃣ SECTION TIME SPENT
+  =============================== */
 
   let activeSection = null;
-  let sectionStartTime = 0;
+  let startTime = 0;
 
-  const timeObserver = new IntersectionObserver((entries) => {
+  const timeObserver = new IntersectionObserver(entries => {
+
     entries.forEach(entry => {
 
       const sectionId = entry.target.id || "footer";
 
       if (entry.isIntersecting) {
         activeSection = sectionId;
-        sectionStartTime = Date.now();
-      } else {
-        if (activeSection === sectionId) {
-          const timeSpent = Math.round((Date.now() - sectionStartTime) / 1000);
+        startTime = Date.now();
+      } 
+      else if (activeSection === sectionId) {
 
-          gtag('event', 'section_time_spent', {
-            section_name: sectionId,
-            time_seconds: timeSpent
-          });
+        const timeSpent =
+          Math.round((Date.now() - startTime) / 1000);
 
-          activeSection = null;
-        }
+        gtag('event', 'section_time_spent', {
+          section_name: sectionId,
+          time_seconds: timeSpent
+        });
+
+        activeSection = null;
       }
 
     });
+
   }, { threshold: 0.5 });
 
-  sections.forEach(section => {
-    timeObserver.observe(section);
-  });
+  sections.forEach(section => timeObserver.observe(section));
 
 });
 
 
-/* -----------------------------------------------------
-   3️⃣ PROJECT BUTTON CLICK TRACKING
-   Used when user clicks "View Project"
------------------------------------------------------ */
+/* ===============================
+   3️⃣ PROJECT CLICK TRACKING
+=============================== */
 
 function trackProjectClick(projectName) {
+
   gtag('event', 'project_click', {
     project_name: projectName
   });
+
 }
 
-
-/* -----------------------------------------------------
+/* ===============================
    4️⃣ GITHUB OUTBOUND CLICK TRACKING
-   Used for GitHub repo links (Skills + Projects)
------------------------------------------------------ */
+   Tracks skill/project repo clicks
+=============================== */
 
-function trackGitClick(itemName) {
+function trackGitClick(skillName, repoUrl) {
+
   gtag('event', 'github_click', {
-    item_name: itemName
+    skill_name: skillName,
+    link_url: repoUrl,
+    event_callback: function () {
+        window.open(repoUrl, '_blank');
+    }
   });
+
 }
-    // ================= RESUME DOWNLOAD TRACKING =================
+
+/* ===============================
+   5️⃣ RESUME DOWNLOAD TRACKING
+=============================== */
 
 function trackResumeDownload() {
-    
-    if (typeof gtag === "function") {
 
-        gtag('event', 'resume_download', {
-            event_category: 'Engagement',
-            event_label: 'Main Resume',
-            page_title: document.title
-        });
+  const resumeURL = "Images/Resume.pdf";
 
-    }
+  gtag('event', 'resume_download', {
+    event_category: 'Engagement',
+    event_label: 'Main Resume'
+  });
+
+  window.open(resumeURL, "_blank");
 }
+
+
 
 </script>
 
 </body>
 </html>
-
 
 
 
